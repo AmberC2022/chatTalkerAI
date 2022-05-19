@@ -52,6 +52,9 @@ body{
 a{
     text-decoration: none;
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 a:visited{
     color: inherit;
@@ -117,6 +120,7 @@ p{
     padding: 8px 32px;
     background: #FF5D50;
     color: #fff;
+    border-radius: 22px;
 }
 
 .banner{
@@ -153,6 +157,7 @@ p{
 .platform{
     max-width: 979px;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .window{
@@ -160,8 +165,7 @@ p{
     justify-content: space-between;
     align-items: center;
     margin-top: 48px;
-    width: 100%;
-   
+    width: 969px;  
 }
 
 
@@ -181,4 +185,128 @@ p{
     color: #747474;
     font-size: 16px;
     margin-top: 24px;
+}
+
+/* service */
+.service{
+    margin-bottom: 100px;
+}
+.service p{
+    margin-top: 16px;
+    margin-bottom: 48px;
+    font-size: 16px;
+}
+
+.window2{
+    width: 1088px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.card2{
+    display: flex;
+    align-items: center;
+}
+.card2 .pic2 img{
+    width: 260px;
+    height: 260px;
+    border-radius:12px 12px 0 0;
+}
+
+.service h3{
+    color: #56C4C5;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 16px;
+}   
+
+.card2 ul{
+    width: 260px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card2 .text2 p{
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+/* solution */
+.solution{
+    width: 1039px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.solution p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.aim{
+    width: 395px;
+    top: 165px;
+    text-align: left; 
+}
+
+.aim .price2{
+    width: 136px;
+    margin-top: 24px;
+}
+.aim .price2 a{
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    background: #56C4C5;
+    border: 1px solid #56C4C5;
+    color: #fff; 
+    border-radius: 27px;
+    font-family: Comfortaa;
+    font-weight: 400;  
+    text-align: center;
+}
+
+.aim .price2 a:hover{
+    background: #fff;
+   
+    color: #56C4C5;   
+}
+
+.pic3 img{
+    border-radius: 999px;
+    box-shadow: 0px 2px 10px #00000014;
+    opacity: 1;
+    padding-top: 32px;
+    padding-left: 32px;
+    margin-bottom: 24px;
+    left: 32px;
+    top: 32px;
+}
+
+.card3 ul{
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    opacity: 1;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 230px;
+    align-items: flex-start;
+}
+
+.card3 ul h3{
+    padding-left: 32px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.card3 ul p{
+    padding-left: 32px;
+    font-size: 16px;
+    padding-bottom: 48px;
 }

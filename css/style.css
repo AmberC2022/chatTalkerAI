@@ -98,6 +98,9 @@ p{
     max-width: 1088px;
     margin: 0 auto;
     margin-bottom: 100px;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .nav{
@@ -105,14 +108,15 @@ p{
     justify-content: space-between;
     padding-top: 24px;
     align-items: flex-start;
+    max-width: 1088px;
 }
 
 .logo img{
-    width: 215px;
-    height:40px;
+    max-width: 215px;
+    height:auto;
 }
 .price{
-    width: 128px;
+    max-width: 128px;
 }
 .price a{
     font-size: 16;
@@ -129,18 +133,22 @@ p{
     align-items: center;
     justify-content: space-between;
     max-width: 1088px;
+    flex-wrap: wrap;
 }
 
+.bannerSlogan{
+    max-width:451px;
+}
 .bannerSlogan h2{
     font-size: 42px;
 }
-
-.bannerSlogan p{
-    font-family: Noto Sans TC;
+.bannerPic{
+    max-width: 532px;
+    height: auto;
 }
-.banner .bannerPic img{
-    width: 532px;
-    height: 534px;
+.bannerPic img{
+    max-width: 532px;
+    height: auto;
 }
 
 .main{
@@ -152,34 +160,59 @@ p{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+/* platform */
 .platform{
-    max-width: 979px;
+    max-width: 1088px;
     justify-content: center;
+    flex-direction: column;
     margin-bottom: 100px;
 }
 
 .window{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    max-width: 1088px;  
+    margin: 0 auto; 
     margin-top: 48px;
-    width: 969px;  
 }
 
-
-.platform .card1{
+.card1{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    outline:1px solid #000;
+    width: 250px;
+    
+}
+
+/* .platform .window .card1{
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 24px;
+} */
+
+@media(max-width:375px){
+    .platform .card1{
+        max-width: 100%;
+}
 }
 
 .card1 .pic img{
-    width: 90px;
-    height: 90px;
-    margin-bottom: 24px;
+    max-width: 90px;
+    height: auto;
+    margin: 24px;
 }
 .card1 p {
     color: #747474;
@@ -198,7 +231,7 @@ p{
 }
 
 .window2{
-    width: 1088px;
+    max-width: 1088px;
     justify-content: space-between;
     display: flex;
 }
@@ -208,8 +241,8 @@ p{
     align-items: center;
 }
 .card2 .pic2 img{
-    width: 260px;
-    height: 260px;
+    max-width: 260px;
+    height: auto;
     border-radius:12px 12px 0 0;
 }
 
@@ -241,6 +274,7 @@ p{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
 }
 
 .solution p{

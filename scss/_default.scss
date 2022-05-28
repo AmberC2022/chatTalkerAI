@@ -1,0 +1,16 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body, input, a{
+    font-family: "Segoe UI", "Noto Sans TC", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", Meiryo, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}

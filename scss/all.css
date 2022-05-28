@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -57,7 +58,20 @@ table {
           box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, input, a {
+  font-family: "Segoe UI", "Noto Sans TC", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", Meiryo, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
 a {
+  text-decoration: none;
+}
+
+a:visited {
   text-decoration: none;
 }
 
@@ -173,7 +187,6 @@ a {
 
 .wrap .main .platform {
   padding-top: 217px;
-  width: 100%;
   height: 100vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -181,21 +194,7 @@ a {
   position: relative;
 }
 
-.wrap .main .platform .ball-l {
-  position: absolute;
-  width: 138px;
-  height: 360px;
-  left: -300px;
-  top: -200px;
-  background-color: #000;
-}
-
-.wrap .main .platform .ball-l img {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.wrap .main .platform h2 {
+.wrap .main h2 {
   font-size: 32px;
   text-align: center;
   font-weight: bold;
@@ -203,8 +202,7 @@ a {
       flex-wrap: wrap;
 }
 
-.wrap .main .platform ul {
-  width: 100%;
+.wrap .main ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,14 +215,26 @@ a {
           align-items: center;
 }
 
-.wrap .main .platform ul li {
+.wrap .main ul li {
   width: 32%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.wrap .main .platform ul li img {
+@media (max-width: 768px) {
+  .wrap .main ul li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrap .main ul li {
+    width: 100%;
+  }
+}
+
+.wrap .main ul li img {
   display: block;
   max-width: 90px;
   height: auto;
@@ -233,14 +243,14 @@ a {
   margin: 0 auto;
 }
 
-.wrap .main .platform ul li h3 {
+.wrap .main ul li h3 {
   font-size: 24px;
   margin-bottom: 24px;
   text-align: center;
   font-weight: bold;
 }
 
-.wrap .main .platform ul li p {
+.wrap .main ul li p {
   display: block;
   font-style: 16px;
   text-align: center;
@@ -248,7 +258,7 @@ a {
   color: #747474;
 }
 
-.wrap .main .service {
+.wrap .service {
   width: 100%;
   height: 100vh;
   margin-top: 50px;
@@ -256,19 +266,19 @@ a {
   text-align: center;
 }
 
-.wrap .main .service h2 {
+.wrap .service h2 {
   font-size: 32px;
   line-height: 1.5em;
   margin-bottom: 16px;
   font-weight: bold;
 }
 
-.wrap .main .service p {
+.wrap .service p {
   font-size: 20px;
   line-height: 1.5em;
 }
 
-.wrap .main .service ul {
+.wrap .service ul {
   margin-top: 40px;
   width: 100%;
   display: -webkit-box;
@@ -283,7 +293,7 @@ a {
   margin-right: -8px;
 }
 
-.wrap .main .service ul li {
+.wrap .service ul li {
   width: 24%;
   text-align: center;
   border-radius: 12px;
@@ -292,13 +302,13 @@ a {
   opacity: 1;
 }
 
-.wrap .main .service ul li img {
+.wrap .service ul li img {
   width: 100%;
   height: auto;
   border-radius: 12px 12px 0 0;
 }
 
-.wrap .main .service ul li h3 {
+.wrap .service ul li h3 {
   margin-top: 16px;
   margin-bottom: 16px;
   font-size: 24px;
@@ -306,12 +316,12 @@ a {
   color: #56C4C5;
 }
 
-.wrap .main .service ul li p {
+.wrap .service ul li p {
   font-size: 16px;
   padding-bottom: 24px;
 }
 
-.wrap .main .solution {
+.wrap .solution {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,20 +341,20 @@ a {
   height: 100vh;
 }
 
-.wrap .main .solution .aside h2 {
+.wrap .solution .aside h2 {
   font-size: 32px;
   line-height: 1.5em;
   margin-bottom: 16px;
   font-weight: bold;
 }
 
-.wrap .main .solution .aside p {
+.wrap .solution .aside p {
   font-size: 18px;
   line-height: 1.5em;
   margin-bottom: 48px;
 }
 
-.wrap .main .solution .aside a {
+.wrap .solution .aside a {
   padding: 12px 32px;
   color: white;
   background: #56C4C5;
@@ -354,7 +364,7 @@ a {
   margin-top: 24px;
 }
 
-.wrap .main .solution ul {
+.wrap .solution ul {
   max-width: 507px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,7 +376,7 @@ a {
           justify-content: space-between;
 }
 
-.wrap .main .solution ul li {
+.wrap .solution ul li {
   border-radius: 12px;
   -webkit-box-shadow: 0px 2px 10px #00000014;
           box-shadow: 0px 2px 10px #00000014;
@@ -375,7 +385,7 @@ a {
   width: 45%;
 }
 
-.wrap .main .solution ul li .circle {
+.wrap .solution ul li .circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,11 +405,11 @@ a {
   border-radius: 999px;
 }
 
-.wrap .main .solution ul li .circle img {
+.wrap .solution ul li .circle img {
   display: block;
 }
 
-.wrap .main .solution ul li h3 {
+.wrap .solution ul li h3 {
   font-size: 18px;
   font-weight: bold;
   margin-top: 24px;
@@ -407,7 +417,7 @@ a {
   padding-left: 16px;
 }
 
-.wrap .main .solution ul li p {
+.wrap .solution ul li p {
   font-size: 16px;
   line-height: 1.5em;
   padding-bottom: 48px;
@@ -415,19 +425,19 @@ a {
   padding-right: 32px;
 }
 
-.wrap .main .recommend {
+.wrap .recommend {
   margin-top: 100px;
   height: 100vh;
 }
 
-.wrap .main .recommend h2 {
+.wrap .recommend h2 {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 104px;
 }
 
-.wrap .main .recommend ul {
+.wrap .recommend ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,7 +446,7 @@ a {
           justify-content: space-between;
 }
 
-.wrap .main .recommend ul li {
+.wrap .recommend ul li {
   position: relative;
   width: 31.3%;
   -webkit-box-shadow: 0px 2px 10px #00000014;
@@ -449,7 +459,7 @@ a {
   padding-top: 24px;
 }
 
-.wrap .main .recommend ul li .circularPhoto {
+.wrap .recommend ul li .circularPhoto {
   border-radius: 999px;
   width: 80px;
   height: 80px;
@@ -461,7 +471,7 @@ a {
   opacity: 1;
 }
 
-.wrap .main .recommend ul li .circularPhoto img {
+.wrap .recommend ul li .circularPhoto img {
   border-radius: 999px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -469,20 +479,20 @@ a {
   height: 100%;
 }
 
-.wrap .main .recommend ul li p.review {
+.wrap .recommend ul li p.review {
   font-size: 16px;
   padding-top: 24px;
   padding-bottom: 24px;
   line-height: 1.5em;
 }
 
-.wrap .main .recommend ul li hr {
+.wrap .recommend ul li hr {
   max-width: 288px;
   border-bottom: 0.5px solid #DDDDDD;
   opacity: 1;
 }
 
-.wrap .main .recommend ul li .company h4 {
+.wrap .recommend ul li .company h4 {
   padding-top: 24px;
   padding-bottom: 8px;
   font-size: 18px;
@@ -490,7 +500,7 @@ a {
   margin-bottom: 8px;
 }
 
-.wrap .main .recommend ul li .box {
+.wrap .recommend ul li .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,11 +512,11 @@ a {
           align-items: center;
 }
 
-.wrap .main .recommend ul li .box p {
+.wrap .recommend ul li .box p {
   font-size: 16px;
 }
 
-.wrap .main .recommend ul li .box .score {
+.wrap .recommend ul li .box .score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,13 +529,13 @@ a {
           align-items: center;
 }
 
-.wrap .main .recommend ul li .box .score img {
+.wrap .recommend ul li .box .score img {
   display: block;
   width: 16.78px;
   height: 16px;
 }
 
-.wrap .footer {
+.footer {
   width: 100%;
   height: 503px;
   text-align: center;
@@ -534,14 +544,14 @@ a {
   background-size: 100%;
 }
 
-.wrap .footer .p-footer {
+.footer .p-footer {
   font-size: 32px;
   font-weight: bold;
   padding-top: 260px;
   padding-bottom: 72px;
 }
 
-.wrap .footer a {
+.footer a {
   padding: 12px 32px;
   color: white;
   background: #56C4C5;
@@ -551,11 +561,11 @@ a {
   margin: 0 auto;
 }
 
-.wrap .copyright {
+.copyright {
   background: #F5F5F5;
 }
 
-.wrap .copyright p {
+.copyright p {
   font-size: 16px;
   padding-top: 16px;
   padding-bottom: 16px;

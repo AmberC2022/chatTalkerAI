@@ -5,45 +5,40 @@
   background-repeat:no-repeat;
   background-position:right  top, -222px 588px,110% 1694px, 50px 2640px;
   background-size: 850px 768px, 380px 380px,310px 310px,150px 150px ;
-  @include pad{
-    background: none;
-  };
+  // @include pad{
+  //   background: none;
+  // };
   @include mobile{
     background-image:url(../images/bg_home.svg), url(../images/ball01.svg), url(../images/ball02.svg),url(../images/ball03.svg);
     background-position:right  top, -77px 743px,287px 3067px, -76px 4827px;
     background-size: 850px 768px, 49px 126px,135px 135px,77px 153px 
     }
-  .container{
-    max-width: 1128px;
-    padding: 0 20px;
-    margin: 0 auto;
-
-    .header{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 0;
-      margin-bottom: 30px;
-      @include pad{
-        border-bottom: 2px solid #FFD153;
-        padding-left: 24px;
-        padding-right: 24px;
-        background: #fff; 
-        z-index: 999;
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    margin-bottom: 30px;
+    @include pad{
+      border-bottom: 2px solid #FFD153;
+      padding-left: 24px;
+      padding-right: 24px;
+      background: #fff; 
+      z-index: 999;
+    }
+    .logo{
+      a{
+        display: block;
+        img{
+          width: 218px;
+          height:40px;
+          @include pad{
+            width: 131px;
+            height: 24px;
+          }   
+        }  
       }
-      .logo{
-        a{
-          display: block;
-          img{
-            width: 218px;
-            height:40px;
-            @include pad{
-              width: 131px;
-              height: 24px;
-            }   
-          }  
-        }
-      }
+    }
       .price{
         a{
           display: block;
@@ -53,7 +48,12 @@
           background: none;
         }
       }
-    }
+  }
+  .container{
+    max-width: 1128px;
+    padding: 0 20px;
+    margin: 0 auto;
+
     .banner{
       display: flex;
       justify-content: space-between;
@@ -174,19 +174,19 @@
           margin-bottom: 60px;
           position: relative;
         }
-        .ball-m{
-          width: 88px;
-          height: 100px;
-          @include{
-            display: inline;
-            position: absolute;
-            width: 88px;
-            height: 135px;
-            bottom: 0;
-            right: 0;
-            background: url(../images/ball02.svg) no-repeat;
-            background-size: contain;
-          }
+        // .ball-m{
+        //   width: 88px;
+        //   height: 100px;
+        //   @include{
+        //     display: inline;
+        //     position: absolute;
+        //     width: 88px;
+        //     height: 135px;
+        //     bottom: 0;
+        //     right: 0;
+        //     background: url(../images/ball02.svg) no-repeat;
+        //     background-size: contain;
+        //   }
           
         }
         h2{
@@ -333,7 +333,6 @@
       }
       .recommend{
         margin-bottom: 100px;
-       
         // @include mobile{
         //   background: url(../images/ball03.svg) no-repeat;
         //   background-position-x:-76px ;
@@ -389,7 +388,7 @@
               line-height: 1.5em;
             }
             hr{
-              width: calc(100%-33px;
+              width: calc(100%-33px);
               border-bottom: 0.5px solid #DDDDDD;
               opacity: 1;
             }
@@ -426,7 +425,7 @@
       }
     }
   }
-}
+
 .footer{
   text-align: center;
   background: url(../images/home_footer.svg);

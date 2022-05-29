@@ -1,45 +1,15 @@
-.index-bg{
+.wrap{
   max-width: 1366px;
   margin: 0 auto;
-  background-image:url(../images/bg_home.svg), url(../images/ball01.svg), url(../images/ball02.svg),url(../images/ball03.svg);
-  background-repeat: no-repeat;
-  background-position: right top, -222px 588px,110% 1694px, 50px 2640px;
-  background-size: 850px 768px, 380px 380px,310px 310px,150px 150px ;
-  @include pad{
-    background-image: url(../images/bg_home.svg), url(../images/ball01.svg), url(../images/ball02.svg),url(../images/ball03.svg);
-    background-position:-100%  -100%, -97px 947px,110% 2737px, -109px 3886px ;
-    background-size: 850px 768px, 167px 167px,135px 135px,185px 185px  ;
-  }
-  @include mobile{
-    background-image:url(../images/bg_home.svg), url(../images/ball01.svg), url(../images/ball02.svg),url(../images/ball03.svg);
-    background-position:-100%, -77px 743px,287px 3067px, -76px 4887px;
-    background-size: 850px 768px, 126px 126px,135px 135px,153px 153px ;
-    }
-}
-.plans-bg{
-  background: #F7F9FD;
   background-image:url(../images/banner.svg);
-  background-repeat: no-repeat;
-  background-size: 889px 559px;
-  background-position: right top -5px;
-  @include pad{
-    background-image:url(../images/banner_sm.svg);
-    background-size: contain;
-  }
-  @include mobile{
-    background-image: url(../images/banner_sm.svg);
-    background-size: contain;
-  }
-
-}
-.wrap{
+  background-size: auto 559px;
+  background: F7F9FD;
   .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 24px 20px;
-    margin: 0 auto 30px auto;
-    max-width: 1128px;
+    margin-bottom: 30px;
     @include pad{
       border-bottom: 2px solid #FFD153;
       padding-left: 24px;
@@ -68,6 +38,9 @@
         a{
           display: block;
           @include btn-secondary;
+            &:hover{
+              background: lighten ($color-secondary,20%);
+            }
           }
       }
   }
@@ -75,16 +48,14 @@
     max-width: 1128px;
     padding: 0 20px;
     margin: 0 auto;
-    .banner-plans{
-      padding-top:54px;
-      padding-bottom: 63px;
-    }
+
     .banner{
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 38px;
       margin-bottom: 217px;
+      // height: 100vh;
       @include pad{
         flex-direction: column;
         margin-bottom: 92px;
@@ -129,7 +100,6 @@
         }
       }
     }
-
     .go-to-top{
       position:fixed;
       right:5%;
@@ -141,6 +111,7 @@
     .main{
       .platform{
         margin-bottom: 100px;
+        // height: 100vh;
         justify-content: space-between;  
         position: relative; 
         @include mobile{
@@ -318,7 +289,7 @@
           }
         }
         ul{
-          width: 48%;
+          max-width: 507px;
           display: flex;
           flex-wrap:wrap;
           justify-content: space-between;
@@ -333,7 +304,7 @@
             margin-bottom: 28px;
             width: 45%;
             @include pad{
-              width: 230px;
+              width: 45%;
               margin-bottom: 24px;
               margin-left: 10px;
               justify-content: space-around;

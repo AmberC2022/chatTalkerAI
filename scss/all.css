@@ -1,8 +1,8 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.googleapis.com/css2?family=Comfortaa&display=swap);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,7 +59,7 @@ table {
 }
 
 body, input, a {
-  font-family: "Segoe UI", "Noto Sans TC", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", Meiryo, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-family: "Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
 }
 
 a {
@@ -94,7 +94,6 @@ a:visited {
 }
 
 .plans-bg {
-  background: #F7F9FD;
   background-image: url(../images/banner.svg);
   background-repeat: no-repeat;
   background-size: 889px 559px;
@@ -140,9 +139,6 @@ a:visited {
     left: 0;
   }
 }
-.wrap .header .logo a {
-  display: block;
-}
 .wrap .header .logo a img {
   width: 218px;
   height: 40px;
@@ -154,15 +150,15 @@ a:visited {
   }
 }
 .wrap .header .price a {
-  display: block;
   padding: 8px 32px;
   color: white;
   background: #FF5D50;
+  border: 1px solid #FF5D50;
   border-radius: 22px;
-  display: block;
 }
 .wrap .header .price a:hover {
-  background: #ffbbb6;
+  background: white;
+  color: #FF5D50;
 }
 .wrap .container {
   max-width: 1128px;
@@ -460,7 +456,7 @@ a:visited {
 @media (max-width: 768px) {
   .wrap .container .main .solution .aside-text {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 44px;
     text-align: center;
   }
 }
@@ -478,7 +474,7 @@ a:visited {
 .wrap .container .main .solution .aside-text p {
   font-size: 18px;
   line-height: 1.5em;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 @media (max-width: 375px) {
   .wrap .container .main .solution .aside-text p {
@@ -489,12 +485,12 @@ a:visited {
   padding: 12px 32px;
   color: white;
   background: #56C4C5;
+  border: 1px solid #56C4C5;
   border-radius: 27px;
-  width: 136px;
-  display: block;
 }
 .wrap .container .main .solution .aside-text a:hover {
-  background: #a2dfdf;
+  background: white;
+  color: #56C4C5;
 }
 @media (max-width: 768px) {
   .wrap .container .main .solution .aside-text a {
@@ -655,7 +651,7 @@ a:visited {
   line-height: 1.5em;
 }
 .wrap .container .main .recommend ul li hr {
-  width: calc(100% - 33px);
+  width: 100%;
   border-bottom: 0.5px solid #DDDDDD;
   opacity: 1;
 }
@@ -697,6 +693,396 @@ a:visited {
   width: 16.78px;
   height: 16px;
 }
+.wrap .container .main .plans-and-price {
+  margin-bottom: 100px;
+}
+.wrap .container .main .plans-and-price h2 {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 48px;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price h2 {
+    font-size: 28px;
+  }
+}
+.wrap .container .main .plans-and-price .plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.wrap .container .main .plans-and-price .plans .number-of-people {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.wrap .container .main .plans-and-price .plans .number-of-people .num {
+  font-size: 32px;
+  color: #56C4C5;
+}
+.wrap .container .main .plans-and-price .plans .number-of-people a {
+  padding: 12px 32px;
+  color: #56C4C5;
+  background: #fff;
+  border: 1px solid #56C4C5;
+  border-radius: 27px;
+}
+.wrap .container .main .plans-and-price .plans .number-of-people a:hover {
+  background: #56C4C5;
+  color: #fff;
+}
+.wrap .container .main .plans-and-price .comparison {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10.5px;
+  margin-right: 10.5px;
+  width: 40.8%;
+  padding-bottom: 32px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  opacity: 1;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic hr {
+  width: 100%;
+  border: 0.5px solid #DDDDDD;
+  margin-bottom: 32px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic p {
+  text-align: center;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic p .font-sub {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic p .font-sub-primary {
+  font-size: 12px;
+  vertical-align: 10%;
+  color: #56C4C5;
+  font-weight: bold;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic p .font-sub-bold {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic p .font-num {
+  font-family: Comfortaa;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic p .font-num-primary {
+  color: #56C4C5;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner .num-subscriptions {
+  width: 169px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 26px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  opacity: 1;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner .equal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 29px;
+  padding-left: 21px;
+  padding-right: 17px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner .cost-monthly {
+  margin-right: 26px;
+  width: 169px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  opacity: 1;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .features {
+  padding-bottom: 32px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .features li {
+  background: url(../images/icon_check.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 19.56px 16px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .features li p {
+  font-size: 16px;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 28.94px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic a {
+  padding: 12px 32px;
+  color: white;
+  background: #56C4C5;
+  border: 1px solid #56C4C5;
+  border-radius: 27px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic a:hover {
+  background: white;
+  color: #56C4C5;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10.5px;
+  margin-right: 10.5px;
+  width: 40.8%;
+  padding-bottom: 32px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  opacity: 1;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander hr {
+  width: 100%;
+  border: 0.5px solid #DDDDDD;
+  margin-bottom: 32px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander p {
+  text-align: center;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander p .font-sub {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander p .font-sub-primary {
+  font-size: 12px;
+  vertical-align: 10%;
+  color: #56C4C5;
+  font-weight: bold;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander p .font-sub-bold {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander p .font-num {
+  font-family: Comfortaa;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander p .font-num-primary {
+  color: #56C4C5;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner .num-subscriptions {
+  width: 169px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 26px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  opacity: 1;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner .equal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 29px;
+  padding-left: 21px;
+  padding-right: 17px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner .cost-monthly {
+  margin-right: 26px;
+  width: 169px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  opacity: 1;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .features {
+  padding-bottom: 32px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .features li {
+  background: url(../images/icon_check.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 19.56px 16px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .features li p {
+  font-size: 16px;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 28.94px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander a {
+  padding: 12px 32px;
+  color: white;
+  background: #56C4C5;
+  border: 1px solid #56C4C5;
+  border-radius: 27px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander a:hover {
+  background: white;
+  color: #56C4C5;
+}
+.wrap .container .main .faq h2 {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 48px;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .faq h2 {
+    font-size: 28px;
+  }
+}
+.wrap .container .main .faq li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px 32px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  opacity: 1;
+}
+.wrap .container .main .faq li:hover {
+  cursor: pointer;
+}
+.wrap .container .main .faq li .active {
+  color: #56C4C5;
+  font-weight: bold;
+}
+.wrap .container .main .faq li .faq-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrap .container .main .faq li .faq-title h3 {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.wrap .container .main .faq li .faq-title img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.wrap .container .main .faq li .faq-ans p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #747474;
+  line-height: 2em;
+}
 
 .footer {
   text-align: center;
@@ -715,36 +1101,36 @@ a:visited {
   padding-top: 260px;
   font-size: 32px;
   font-weight: bold;
-  padding-bottom: 48px;
+  padding-bottom: 60px;
 }
 @media (max-width: 375px) {
   .footer .p-footer {
     font-size: 24px;
     padding-top: 293px;
-    padding-bottom: 24px;
+    padding-bottom: 36px;
   }
 }
 .footer a {
   padding: 12px 32px;
   color: white;
   background: #56C4C5;
+  border: 1px solid #56C4C5;
   border-radius: 27px;
-  width: 136px;
   margin: 0 auto;
-  display: block;
-  margin-bottom: 100px;
 }
 .footer a:hover {
-  background: #a2dfdf;
-}
-@media (max-width: 768px) {
-  .footer a {
-    margin-bottom: 60px;
-  }
+  background: white;
+  color: #56C4C5;
 }
 
 .copyright {
   background: #F5F5F5;
+  margin-top: 112px;
+}
+@media (max-width: 375px) {
+  .copyright {
+    margin-top: 72px;
+  }
 }
 .copyright p {
   font-size: 16px;

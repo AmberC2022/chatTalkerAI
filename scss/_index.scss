@@ -17,7 +17,6 @@
     }
 }
 .plans-bg{
-  background: #F7F9FD;
   background-image:url(../images/banner.svg);
   background-repeat: no-repeat;
   background-size: 889px 559px;
@@ -53,7 +52,7 @@
     }
     .logo{
       a{
-        display: block;
+        // display: block;
         img{
           width: 218px;
           height:40px;
@@ -66,7 +65,7 @@
     }
       .price{
         a{
-          display: block;
+          // display: block;
           @include btn-secondary;
           }
       }
@@ -151,7 +150,7 @@
           text-align: center;
           font-weight: bold;
           @include mobile{
-            font-size: $font-l - 4px;
+            font-size: $font-m-l-l;
           }
         }
         ul{
@@ -181,7 +180,7 @@
               }
             }
             h3{
-              font-size: $font-m +4px;
+              font-size: $font-m-l;
               margin-bottom: 24px;
               text-align: center;
               font-weight: bold;
@@ -218,7 +217,7 @@
           margin-bottom: 16px;
           font-weight: bold;
           @include mobile{
-            font-size: $font-l - 4px;
+            font-size: $font-m-l-l;
           }
         }
         p{
@@ -289,7 +288,7 @@
         .aside-text{
           @include pad{
             width: 100%;
-            margin-bottom: 32px;
+            margin-bottom: 44px;
             text-align: center;
           }
           h2{
@@ -298,20 +297,19 @@
             margin-bottom: 16px;
             font-weight: bold; 
             @include mobile{
-              font-size: $font-l - 4px;
+              font-size: $font-m-l-l;
             }  
           }
           p{
             font-size: $font-s;
             line-height: 1.5em;
-            margin-bottom: 24px;
+            margin-bottom: 36px;
             @include mobile{
               font-size: $font-xs;
             }
           }
           a{          
             @include btn-primary;
-            display: block;
             @include pad{
             margin: 0 auto;
             }
@@ -428,7 +426,7 @@
               line-height: 1.5em;
             }
             hr{
-              width: calc(100% - 33px);
+              width: 100%;
               border-bottom: 0.5px solid #DDDDDD;
               opacity: 1;
             }
@@ -463,6 +461,298 @@
           }
         }
       }
+      .plans-and-price{
+        margin-bottom: 100px;
+        h2{
+          font-size: $font-l;
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 48px;
+          @include mobile{
+            font-size: $font-m-l-l;
+          }
+        }
+        .plans{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-bottom: 48px;
+          .number-of-people{
+            padding-left: 8px;
+            padding-right: 8px;
+            .num{
+              font-size: $font-l;
+              color: $color-primary;
+            }
+            a{
+              @include btn-tertiary;
+            }
+          }
+        }
+        .comparison{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .plan-basic{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10.5px;
+            margin-right: 10.5px;
+            width: 40.8%;
+            padding-bottom: 32px;
+            @include deco-border;
+            @include deco-shadow;
+            h3{
+              @include h3-title;
+              padding-top: 10px;
+              padding-bottom: 8px;
+            }
+            hr{
+              width: 100%;
+              border:0.5px solid $color-hr;
+              margin-bottom: 32px;
+            }
+            p{
+              text-align: center;
+              line-height: 1.5em;
+              .font-sub{
+                font-size: $font-xs - 4px;
+                line-height: 1.5em;
+              }
+              .font-sub-primary{
+                @include font-sub;
+                color: $color-primary;
+                font-weight: bold;
+              }
+              .font-sub-bold{
+                font-size: $font-xs - 4px;
+                line-height: 1.5em;
+                font-weight: bold;  
+              }
+              .font-num{
+                font-family: Comfortaa;
+                font-size: 32px;
+                line-height: 1.5em;
+              }
+              .font-num-primary{
+                color: $color-primary;
+                font-size: 32px;
+                line-height: 1.5em;
+              }
+            }
+            .app-inner{
+              display: flex;
+              justify-content: space-evenly;
+              align-content: center;
+              .num-subscriptions{
+                width: 169px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                margin-top: 32px;
+                margin-bottom: 32px;
+                margin-left: 26px;
+                background: #F5F5F5;
+                border-radius: 12px;
+                opacity: 1;
+              }
+              .equal{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 29px;
+                padding-left: 21px;
+                padding-right: 17px;
+              }
+              .cost-monthly{
+                margin-right: 26px;
+                width: 169px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                margin-top: 32px;
+                margin-bottom: 32px;
+                background: #F5F5F5;
+                border-radius: 12px;
+                opacity: 1;
+              }
+            }
+            .features{
+              padding-bottom: 32px;
+              li{
+                background: url(../images/icon_check.svg);
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: 19.56px 16px;
+                
+                p{            
+                  font-size: $font-xs;
+                  text-align: left;
+                  padding-top: 8px;
+                  padding-bottom: 8px;
+                  padding-left: 28.94px;
+                }
+              }
+            }
+            a{
+              @include btn-primary;        
+            }
+          }
+          .plan-stander{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10.5px;
+            margin-right: 10.5px;
+            width: 40.8%;
+            padding-bottom: 32px;
+            @include deco-border;
+            @include deco-shadow;
+            h3{
+              @include h3-title;
+              padding-top: 10px;
+              padding-bottom: 8px;
+            }
+            hr{
+              width: 100%;
+              border:0.5px solid $color-hr;
+              margin-bottom: 32px;
+            }
+            p{
+              text-align: center;
+              line-height: 1.5em;
+              .font-sub{
+                font-size: $font-xs - 4px;
+                line-height: 1.5em;
+              }
+              .font-sub-primary{
+                @include font-sub;
+                color: $color-primary;
+                font-weight: bold;
+              }
+              .font-sub-bold{
+                font-size: $font-xs - 4px;
+                line-height: 1.5em;
+                font-weight: bold;  
+              }
+              .font-num{
+                font-family: Comfortaa;
+                font-size: 32px;
+                line-height: 1.5em;
+              }
+              .font-num-primary{
+                color: $color-primary;
+                font-size: 32px;
+                line-height: 1.5em;
+              }
+            }
+            .app-inner{
+              display: flex;
+              justify-content: space-evenly;
+              align-content: center;
+              .num-subscriptions{
+                width: 169px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                margin-top: 32px;
+                margin-bottom: 32px;
+                margin-left: 26px;
+                background: #F5F5F5;
+                border-radius: 12px;
+                opacity: 1;
+              }
+              .equal{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 29px;
+                padding-left: 21px;
+                padding-right: 17px;
+              }
+              .cost-monthly{
+                margin-right: 26px;
+                width: 169px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                margin-top: 32px;
+                margin-bottom: 32px;
+                background: #F5F5F5;
+                border-radius: 12px;
+                opacity: 1;
+              }
+            }
+            .features{
+              padding-bottom: 32px;
+              li{
+                background: url(../images/icon_check.svg);
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: 19.56px 16px;
+                
+                p{            
+                  font-size: $font-xs;
+                  text-align: left;
+                  padding-top: 8px;
+                  padding-bottom: 8px;
+                  padding-left: 28.94px;
+                }
+              }
+            }
+            a{
+              @include btn-primary;        
+            }
+          }
+        }
+      }
+      .faq{
+        h2{
+          font-size: $font-l;
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 48px;
+          @include mobile{
+            font-size: $font-m-l-l;
+          }
+        }
+        li{
+          display: flex;
+          flex-direction: column;
+          padding: 16px 32px;
+          margin-bottom: 16px;
+          @include deco-border;
+          @include deco-shadow;
+          &:hover{
+            cursor: pointer;
+          }
+          .active{
+            color: $color-primary;
+            font-weight: bold;
+          }
+          .faq-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+              font-size: $font-s;
+              line-height: 1.5em;
+            }
+            img{
+              width: 20px;
+              height: 20px;
+              display: block;
+            }
+          }
+          .faq-ans{
+            p{
+              margin-top: 12px;
+              font-size: $font-xs;
+              color: $color-third;
+              line-height: 2em;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -481,25 +771,24 @@
     padding-top: 260px;
     font-size: $font-l;
     font-weight: bold;
-    padding-bottom: 48px;
+    padding-bottom: 60px;
     @include mobile{
-      font-size: $font-m +4px;
+      font-size: $font-m-l;
       padding-top: 293px;
-      padding-bottom: 24px;
+      padding-bottom: 36px;
     }
   }
   a{
     @include btn-primary;
     margin: 0 auto;
-    display: block;
-    margin-bottom: 100px;
-    @include pad{
-      margin-bottom: 60px;
-    }
   }
 }
 .copyright{
   background: #F5F5F5;
+  margin-top: 112px;
+  @include mobile{
+    margin-top: 72px;
+  }
   p{
     font-size: $font-xs;
     padding-top: 16px;

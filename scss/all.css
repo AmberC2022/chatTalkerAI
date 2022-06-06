@@ -101,14 +101,16 @@ a:visited {
 }
 @media (max-width: 768px) {
   .plans-bg {
-    background-image: url(../images/banner_sm.svg);
+    background-image: url(../images/banner.svg);
     background-size: contain;
+    background-position: right top 75px;
   }
 }
 @media (max-width: 375px) {
   .plans-bg {
     background-image: url(../images/banner_sm.svg);
-    background-size: contain;
+    background-size: 375px 495px;
+    background-position: right top 75px;
   }
 }
 
@@ -123,7 +125,6 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
   padding: 24px 20px;
-  margin: 0 auto 30px auto;
   max-width: 1128px;
 }
 @media (max-width: 768px) {
@@ -169,6 +170,11 @@ a:visited {
   padding-top: 54px;
   padding-bottom: 63px;
 }
+@media (max-width: 375px) {
+  .wrap .container .banner-plans {
+    padding-top: 12px;
+  }
+}
 .wrap .container .banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,8 +185,8 @@ a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 38px;
-  margin-bottom: 217px;
+  padding-top: 38px;
+  padding-bottom: 217px;
 }
 @media (max-width: 768px) {
   .wrap .container .banner {
@@ -188,7 +194,8 @@ a:visited {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 92px;
+    margin-bottom: 204px;
+    padding-top: 48px;
   }
 }
 .wrap .container .banner .bannerSlogan h1 {
@@ -212,7 +219,7 @@ a:visited {
 }
 @media (max-width: 768px) {
   .wrap .container .banner .bannerSlogan p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 32px;
   }
 }
@@ -231,7 +238,7 @@ a:visited {
     background: url(../images/bg_home_sm.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: contain;
+    background-size: auto contain;
   }
 }
 .wrap .container .go-to-top {
@@ -589,22 +596,56 @@ a:visited {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 104px;
+  margin-bottom: 48px;
 }
-.wrap .container .main .recommend ul {
+.wrap .container .main .recommend .swiper {
+  width: 100%;
+  height: 350px;
+}
+.wrap .container .main .recommend .swiper .swiper-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider {
+  width: 31%;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider {
+    width: 100%;
+  }
+}
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item {
+  position: relative;
   width: 100%;
 }
-.wrap .container .main .recommend ul li {
-  position: relative;
-  width: 31.3%;
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .circularPhoto {
+  z-index: 10;
+  position: absolute;
+  left: 32px;
+  border-radius: 999px;
+  width: 80px;
+  height: 80px;
+  top: 0px;
+  left: 32px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  opacity: 1;
+}
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .circularPhoto img {
+  border-radius: 999px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 80px;
+  height: 80px;
+}
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner {
+  position: absolute;
+  top: 52px;
+  width: 352px;
+  height: 248px;
   background: #fff;
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
@@ -616,53 +657,35 @@ a:visited {
   padding-top: 24px;
 }
 @media (max-width: 768px) {
-  .wrap .container .main .recommend ul li {
+  .wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner {
     width: 100%;
   }
 }
 @media (max-width: 375px) {
-  .wrap .container .main .recommend ul li {
+  .wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner {
     width: 100%;
     margin-bottom: 74px;
   }
 }
-.wrap .container .main .recommend ul li .circularPhoto {
-  border-radius: 999px;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: -56px;
-  left: 32px;
-  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
-          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
-  opacity: 1;
-}
-.wrap .container .main .recommend ul li .circularPhoto img {
-  border-radius: 999px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-.wrap .container .main .recommend ul li p.review {
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner p.review {
   font-size: 16px;
   padding-top: 24px;
   padding-bottom: 24px;
   line-height: 1.5em;
 }
-.wrap .container .main .recommend ul li hr {
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner hr {
   width: 100%;
   border-bottom: 0.5px solid #DDDDDD;
   opacity: 1;
 }
-.wrap .container .main .recommend ul li .company h4 {
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner .company h4 {
   padding-top: 24px;
   padding-bottom: 8px;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
 }
-.wrap .container .main .recommend ul li .box {
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,10 +696,10 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
 }
-.wrap .container .main .recommend ul li .box p {
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner .box p {
   font-size: 16px;
 }
-.wrap .container .main .recommend ul li .box .score {
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner .box .score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,13 +711,20 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
 }
-.wrap .container .main .recommend ul li .box .score img {
+.wrap .container .main .recommend .swiper .swiper-wrapper .swiper-slider .card-item .card-liner .box .score img {
   display: block;
   width: 16.78px;
   height: 16px;
 }
 .wrap .container .main .plans-and-price {
-  margin-bottom: 100px;
+  max-width: 909px;
+  margin: 0 auto;
+  margin-bottom: 76px;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price {
+    margin-bottom: 36px;
+  }
 }
 .wrap .container .main .plans-and-price h2 {
   font-size: 32px;
@@ -705,6 +735,8 @@ a:visited {
 @media (max-width: 375px) {
   .wrap .container .main .plans-and-price h2 {
     font-size: 28px;
+    line-height: 1.5em;
+    margin-bottom: 24px;
   }
 }
 .wrap .container .main .plans-and-price .plans {
@@ -718,9 +750,15 @@ a:visited {
       flex-wrap: wrap;
   margin-bottom: 48px;
 }
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .plans {
+    margin: 0 auto 32px auto;
+  }
+}
 .wrap .container .main .plans-and-price .plans .number-of-people {
   padding-left: 8px;
   padding-right: 8px;
+  display: block;
 }
 .wrap .container .main .plans-and-price .plans .number-of-people .num {
   font-size: 32px;
@@ -732,44 +770,64 @@ a:visited {
   background: #fff;
   border: 1px solid #56C4C5;
   border-radius: 27px;
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
 }
 .wrap .container .main .plans-and-price .plans .number-of-people a:hover {
   background: #56C4C5;
   color: #fff;
 }
 .wrap .container .main .plans-and-price .comparison {
+  max-width: 909px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #fff;
+}
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .wrap .container .main .plans-and-price .comparison .plan-basic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 10.5px;
-  margin-right: 10.5px;
-  width: 40.8%;
-  padding-bottom: 32px;
+  width: 444px;
+  margin-bottom: 24px;
   border-radius: 12px;
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
   opacity: 1;
+  margin-right: 10.5px;
+}
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic {
+    max-width: 444px;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic {
+    max-width: 444px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }
 .wrap .container .main .plans-and-price .comparison .plan-basic h3 {
   font-size: 24px;
@@ -778,62 +836,126 @@ a:visited {
   padding-top: 10px;
   padding-bottom: 8px;
 }
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic h3 {
+    padding-top: 16px;
+  }
+}
 .wrap .container .main .plans-and-price .comparison .plan-basic hr {
   width: 100%;
   border: 0.5px solid #DDDDDD;
-  margin-bottom: 32px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic p {
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic hr {
+    margin-bottom: 24px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner {
+  padding: 24px 24px 32px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner {
+    padding: 16px 16px 24px 16px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner p {
   text-align: center;
   line-height: 1.5em;
+  font-size: 16px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic p .font-sub {
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 32px auto;
+  max-width: 392px;
+}
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .font-sub {
   font-size: 12px;
   line-height: 1.5em;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic p .font-sub-primary {
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions {
+  max-width: 169px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  opacity: 1;
+}
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions {
+    padding: 16px 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions {
+    width: 100%;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions .font-sub-bold {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions .font-num-primary {
+  color: #56C4C5;
+  font-family: Comfortaa;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions .font-num-primary {
+    font-size: 28px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions .font-sub-primary {
   font-size: 12px;
   vertical-align: 10%;
   color: #56C4C5;
   font-weight: bold;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic p .font-sub-bold {
-  font-size: 12px;
-  line-height: 1.5em;
-  font-weight: bold;
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .num-subscriptions .font-sub-primary {
+    font-size: 12px;
+  }
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic p .font-num {
-  font-family: Comfortaa;
-  font-size: 32px;
-  line-height: 1.5em;
-}
-.wrap .container .main .plans-and-price .comparison .plan-basic p .font-num-primary {
-  color: #56C4C5;
-  font-size: 32px;
-  line-height: 1.5em;
-}
-.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner .num-subscriptions {
-  width: 169px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 26px;
-  background: #F5F5F5;
-  border-radius: 12px;
-  opacity: 1;
-}
-.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner .equal {
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .equal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,69 +967,117 @@ a:visited {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 29px;
-  padding-left: 21px;
-  padding-right: 17px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic .app-inner .cost-monthly {
-  margin-right: 26px;
-  width: 169px;
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .equal {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .equal {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .cost-monthly {
+  max-width: 169px;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-top: 32px;
-  margin-bottom: 32px;
   background: #F5F5F5;
   border-radius: 12px;
   opacity: 1;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic .features {
-  padding-bottom: 32px;
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .cost-monthly {
+    width: 100%;
+  }
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic .features li {
-  background: url(../images/icon_check.svg);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 19.56px 16px;
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .cost-monthly {
+    width: 100%;
+    padding: 16px 0;
+  }
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic .features li p {
-  font-size: 16px;
-  text-align: left;
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .cost-monthly .font-num {
+  font-family: Comfortaa;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .app-inner .cost-monthly .font-num {
+    font-size: 28px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .features {
+  margin-bottom: 28px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .features li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 28.94px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic a {
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .features li img {
+  max-width: 19.56px;
+  max-height: 16px;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .features li img {
+    max-width: 16px;
+    max-height: 14px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .features li p {
+  font-size: 16px;
+  text-align: left;
+  padding-left: 0.5em;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner .features li p {
+    font-size: 14px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner a {
   padding: 12px 32px;
   color: white;
   background: #56C4C5;
   border: 1px solid #56C4C5;
   border-radius: 27px;
+  margin: 0 auto;
 }
-.wrap .container .main .plans-and-price .comparison .plan-basic a:hover {
+.wrap .container .main .plans-and-price .comparison .plan-basic .wrap-inner a:hover {
   background: white;
   color: #56C4C5;
 }
 .wrap .container .main .plans-and-price .comparison .plan-stander {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 10.5px;
-  margin-right: 10.5px;
-  width: 40.8%;
-  padding-bottom: 32px;
+  width: 444px;
+  margin-bottom: 24px;
   border-radius: 12px;
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
   opacity: 1;
+  margin-left: 10.5px;
+}
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander {
+    max-width: 444px;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander {
+    max-width: 444px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }
 .wrap .container .main .plans-and-price .comparison .plan-stander h3 {
   font-size: 24px;
@@ -916,62 +1086,126 @@ a:visited {
   padding-top: 10px;
   padding-bottom: 8px;
 }
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander h3 {
+    padding-top: 16px;
+  }
+}
 .wrap .container .main .plans-and-price .comparison .plan-stander hr {
   width: 100%;
   border: 0.5px solid #DDDDDD;
-  margin-bottom: 32px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander p {
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander hr {
+    margin-bottom: 24px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner {
+  padding: 24px 24px 32px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner {
+    padding: 16px 16px 24px 16px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner p {
   text-align: center;
   line-height: 1.5em;
+  font-size: 16px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander p .font-sub {
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 32px auto;
+  max-width: 392px;
+}
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .font-sub {
   font-size: 12px;
   line-height: 1.5em;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander p .font-sub-primary {
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions {
+  max-width: 169px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  opacity: 1;
+}
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions {
+    padding: 16px 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions {
+    width: 100%;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions .font-sub-bold {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions .font-num-primary {
+  color: #56C4C5;
+  font-family: Comfortaa;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions .font-num-primary {
+    font-size: 28px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions .font-sub-primary {
   font-size: 12px;
   vertical-align: 10%;
   color: #56C4C5;
   font-weight: bold;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander p .font-sub-bold {
-  font-size: 12px;
-  line-height: 1.5em;
-  font-weight: bold;
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .num-subscriptions .font-sub-primary {
+    font-size: 12px;
+  }
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander p .font-num {
-  font-family: Comfortaa;
-  font-size: 32px;
-  line-height: 1.5em;
-}
-.wrap .container .main .plans-and-price .comparison .plan-stander p .font-num-primary {
-  color: #56C4C5;
-  font-size: 32px;
-  line-height: 1.5em;
-}
-.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner .num-subscriptions {
-  width: 169px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 26px;
-  background: #F5F5F5;
-  border-radius: 12px;
-  opacity: 1;
-}
-.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner .equal {
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .equal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -983,46 +1217,99 @@ a:visited {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 29px;
-  padding-left: 21px;
-  padding-right: 17px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander .app-inner .cost-monthly {
-  margin-right: 26px;
-  width: 169px;
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .equal {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .equal {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .cost-monthly {
+  max-width: 169px;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-top: 32px;
-  margin-bottom: 32px;
   background: #F5F5F5;
   border-radius: 12px;
   opacity: 1;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander .features {
-  padding-bottom: 32px;
+@media (min-width: 820px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .cost-monthly {
+    width: 100%;
+  }
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander .features li {
-  background: url(../images/icon_check.svg);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 19.56px 16px;
+@media (max-width: 768px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .cost-monthly {
+    width: 100%;
+    padding: 16px 0;
+  }
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander .features li p {
-  font-size: 16px;
-  text-align: left;
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .cost-monthly .font-num {
+  font-family: Comfortaa;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .app-inner .cost-monthly .font-num {
+    font-size: 28px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .features {
+  margin-bottom: 28px;
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .features li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 28.94px;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander a {
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .features li img {
+  max-width: 19.56px;
+  max-height: 16px;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .features li img {
+    max-width: 16px;
+    max-height: 14px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .features li p {
+  font-size: 16px;
+  text-align: left;
+  padding-left: 0.5em;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner .features li p {
+    font-size: 14px;
+  }
+}
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner a {
   padding: 12px 32px;
   color: white;
   background: #56C4C5;
   border: 1px solid #56C4C5;
   border-radius: 27px;
+  margin: 0 auto;
 }
-.wrap .container .main .plans-and-price .comparison .plan-stander a:hover {
+.wrap .container .main .plans-and-price .comparison .plan-stander .wrap-inner a:hover {
   background: white;
   color: #56C4C5;
+}
+.wrap .container .main .faq {
+  max-width: 904px;
+  margin: 0 auto;
 }
 .wrap .container .main .faq h2 {
   font-size: 32px;
@@ -1071,6 +1358,11 @@ a:visited {
 .wrap .container .main .faq li .faq-title h3 {
   font-size: 18px;
   line-height: 1.5em;
+}
+@media (max-width: 375px) {
+  .wrap .container .main .faq li .faq-title h3 {
+    font-size: 16px;
+  }
 }
 .wrap .container .main .faq li .faq-title img {
   width: 20px;

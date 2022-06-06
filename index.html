@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss/all.css">
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script src="./js/all.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>chatTalerAI 首頁</title>
 </head>
 <body class="index-bg">    
@@ -47,7 +46,6 @@
                 <div class="service">
                     <h2>任何的角色，我都能給</h2>
                     <p>量身打造您想要的專屬服務，幫助您迅速判斷成效、並加快決策</p>
-                    <!-- <div class="ball-m" alt="bg-ball"></div> -->
                     <ul>
                         <li>
                             <img src="./images/ch01.svg" alt="活動主">
@@ -100,53 +98,137 @@
                 <div class="recommend">
                     <h2>好評如潮</h2>
                     <div class="ball-s"></div>
-                    <ul>
-                        <li>
-                            <div class="circularPhoto"><img src="./images/user01.jpg" alt="user"></div> 
-                            <p class="review">原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
-                            </p>
-                            <hr> 
-                            <div class="company">
-                                <h4>清心寡慾設計公司</h4>
-                            </div>
-                            <div class="box">
-                                <p>Lina 執行長</p>
-                                <div class="score">
-                                    <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                    <!-- 以下為 swiper 設定 -->
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slider">
+                                <div class="card-item">
+                                    <div class="circularPhoto">
+                                        <img src="./images/user01.jpg" alt="photo">
+                                    </div> 
+                                    <div class="card-liner">
+                                        <p class="review">原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
+                                        </p>
+                                        <hr> 
+                                        <div class="company">
+                                            <h4>清心寡慾設計公司</h4>
+                                        </div>
+                                        <div class="box">
+                                            <p>Lina 執行長</p>
+                                            <div class="score">
+                                                    <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="circularPhoto"><img src="./images/user02.jpg" alt="user"></div> 
-                            <p class="review">團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
-                            </p>
-                            <hr> 
-                            <div class="company">
-                                <h4>subwhat 行銷公司</h4>
-                            </div>
-                            <div class="box">
-                                <p>Zoe 活動長</p>
-                                <div class="score">
-                                    <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                            <div class="swiper-slider">
+                                <div class="card-item">
+                                    <div class="circularPhoto">
+                                        <img src="./images/user02.jpg" alt="user">
+                                    </div> 
+                                    <div class="card-liner">
+                                        <p class="review">團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
+                                        </p>
+                                        <hr> 
+                                        <div class="company">
+                                            <h4>subwhat 行銷公司</h4>
+                                        </div>
+                                        <div class="box">
+                                        <p>Zoe 活動長</p>
+                                        <div class="score">
+                                        <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div> 
-                        </li>
-                        <li>
-                            <div class="circularPhoto"><img src="./images/user03.jpg" alt="user"></div> 
-                            <p class="review">經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
-                            </p>
-                            <hr>
-                            <div class="company">
-                                <h4>油土伯</h4>
-                            </div>
-                            <div class="box">
-                                <p>HowBig</p>
-                                <div class="score">
-                                    <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                            <div class="swiper-slider">
+                                <div class="card-item">
+                                    <div class="circularPhoto"><img src="./images/user03.jpg" alt="user">
+                                    </div> 
+                                    <div class="card-liner">
+                                        <p class="review">經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
+                                        </p>
+                                        <hr>
+                                        <div class="company">
+                                            <h4>油土伯</h4>
+                                        </div>
+                                        <div class="box">
+                                            <p>HowBig</p>
+                                            <div class="score">
+                                            <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                            <div class="swiper-slider">
+                                <div class="card-item">
+                                    <div class="circularPhoto">
+                                        <img src="./images/user01.jpg" alt="photo">
+                                    </div> 
+                                    <div class="card-liner">
+                                        <p class="review">原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
+                                        </p>
+                                        <hr> 
+                                        <div class="company">
+                                            <h4>清心寡慾設計公司</h4>
+                                        </div>
+                                        <div class="box">
+                                            <p>Lina 執行長</p>
+                                            <div class="score">
+                                                    <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slider">
+                                <div class="card-item">
+                                    <div class="circularPhoto">
+                                        <img src="./images/user02.jpg" alt="user">
+                                    </div> 
+                                    <div class="card-liner">
+                                        <p class="review">團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
+                                        </p>
+                                        <hr> 
+                                        <div class="company">
+                                            <h4>subwhat 行銷公司</h4>
+                                        </div>
+                                        <div class="box">
+                                        <p>Zoe 活動長</p>
+                                        <div class="score">
+                                        <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="swiper-slider">
+                                <div class="card-item">
+                                    <div class="circularPhoto"><img src="./images/user03.jpg" alt="user">
+                                    </div> 
+                                    <div class="card-liner">
+                                        <p class="review">經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
+                                        </p>
+                                        <hr>
+                                        <div class="company">
+                                            <h4>油土伯</h4>
+                                        </div>
+                                        <div class="box">
+                                            <p>HowBig</p>
+                                            <div class="score">
+                                            <img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star"><img src="./images/icon_star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>                              
+                        </div>
+                        <div class="swiper-pagination">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div> 
@@ -157,6 +239,9 @@
     </div>
     <div class="copyright">
             <p>© 2022 chatTalker. All Rights Reserved.</p>
-    </div>  
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>  
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/all.js"></script> 
 </body>
 </html>

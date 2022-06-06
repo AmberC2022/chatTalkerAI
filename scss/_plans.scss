@@ -1,0 +1,173 @@
+@mixin comparisons-table{
+    // margin-left: 10.5px;
+    // margin-right: 10.5px;
+    width:444px;
+    margin-bottom: 24px;
+    @include padair{
+        max-width: 444px;
+    }
+    @include pad{
+        max-width: 444px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    @include deco-border;
+    @include deco-shadow;
+    h3{
+        @include h3-title;
+        padding-top: 10px;
+        padding-bottom: 8px;
+        @include pad{
+            padding-top: 16px;
+        }
+    }
+    hr{
+        width: 100%;
+        border:0.5px solid $color-hr;
+        @include mobile{
+            margin-bottom: 24px;
+        }    
+    }
+    .wrap-inner{
+        padding:24px 24px 32px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: left;
+        @include mobile{
+            padding: 16px 16px 24px 16px;
+        }
+        p{
+            text-align: center;
+            line-height: 1.5em;
+            font-size: $font-xs;                            
+        }                            
+        .app-inner{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            margin: 32px auto;
+            max-width: 392px;
+            @include padair{
+                width: 100%;
+            }
+            @include pad{
+                width: 100%;
+                margin-top: 24px;
+                margin-bottom: 24px;
+            } 
+            .font-sub{
+                font-size: $font-xxs - 2px;
+                line-height: 1.5em;
+            }                                
+            .num-subscriptions{
+                max-width: 169px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                background: #F5F5F5;
+                border-radius: 12px;
+                opacity: 1;
+                @include padair{
+                    width: 100%;
+                }
+                @include pad{
+                    padding: 16px 0px;
+                    width: 100%;
+                }
+                @include mobile{
+                    width: 100%;
+                } 
+            .font-sub-bold{
+                font-size: $font-xxs - 2px;
+                line-height: 1.5em;
+                font-weight: bold;  
+            }
+            .font-num-primary{
+                color: $color-primary;
+                font-family: Comfortaa;
+                font-size: 32px;
+                line-height: 1.5em;
+                @include mobile{
+                font-size: $font-m-l-l;
+                }
+            }
+            .font-sub-primary{
+                @include font-sub;
+                color: $color-primary;
+                font-weight: bold;
+                @include mobile{
+                    font-size: $font-xs - 4px;
+                }
+            } 
+            }
+            .equal{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 29px;
+                @include padair{
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                @include pad{
+                    padding-left: 6px;
+                    padding-right: 6px;
+                }
+            }
+            .cost-monthly{
+                max-width: 169px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                background: #F5F5F5;
+                border-radius: 12px;
+                opacity: 1;
+                @include padair{
+                    width: 100%;
+                }
+                @include pad{
+                    width: 100%;
+                    padding: 16px 0;
+                }
+                .font-num{
+                    font-family: Comfortaa;
+                    font-size: 32px;
+                    line-height: 1.5em;
+                    @include mobile{
+                        font-size: $font-m-l-l;
+                    }
+                }
+            }               
+        }
+        .features{
+            margin-bottom: 28px;
+            li{ 
+                display: flex;
+                justify-content: flex-start;
+                align-items: top;       
+                padding-top: 8px;
+                padding-bottom: 8px;
+                img{
+                    max-width: 19.56px;
+                    max-height: 16px;
+                    @include mobile{
+                        max-width: 16px;
+                        max-height: 14px;
+                    }
+                }
+                p{            
+                    font-size: $font-xs;
+                    text-align: left;
+                    padding-left: 0.5em;
+                    @include mobile{
+                        font-size: $font-xxs;
+                    }
+                }
+            }
+        }
+        a{
+        @include btn-primary;  
+        margin: 0 auto;     
+        }
+    }
+}

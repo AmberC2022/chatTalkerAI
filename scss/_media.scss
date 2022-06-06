@@ -1,3 +1,8 @@
+@mixin padair{
+    @media(min-width: 820px){
+        @content;
+    }
+}
 @mixin pad{
     @media(max-width:768px){
         @content;

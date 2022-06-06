@@ -22,14 +22,15 @@
   background-size: 889px 559px;
   background-position: right top -5px;
   @include pad{
-    background-image:url(../images/banner_sm.svg);
+    background-image:url(../images/banner.svg);
     background-size: contain;
+    background-position: right top 75px;
   }
   @include mobile{
     background-image: url(../images/banner_sm.svg);
-    background-size: contain;
+    background-size: 375px 495px;
+    background-position: right top 75px;
   }
-
 }
 .wrap{
   .header{
@@ -37,7 +38,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 20px;
-    margin: 0 auto 30px auto;
     max-width: 1128px;
     @include pad{
       border-bottom: 2px solid #FFD153;
@@ -65,28 +65,32 @@
     }
       .price{
         a{
-          // display: block;
           @include btn-secondary;
-          }
+        }
       }
   }
   .container{
     max-width: 1128px;
     padding: 0 20px;
     margin: 0 auto;
+
     .banner-plans{
       padding-top:54px;
       padding-bottom: 63px;
+      @include mobile{
+        padding-top: 12px;
+      }
     }
     .banner{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 38px;
-      margin-bottom: 217px;
+      padding-top: 38px;
+      padding-bottom:217px;
       @include pad{
         flex-direction: column;
-        margin-bottom: 92px;
+        margin-bottom: 204px;
+        padding-top: 48px;
       };
       .bannerSlogan{
         h1{
@@ -106,7 +110,7 @@
         p{
           font-size: $font-m;
           @include pad{
-            font-size: $font-s;
+            font-size: $font-xs;
             margin-bottom: 32px;
           }
         }
@@ -124,11 +128,10 @@
           background: url(../images/bg_home_sm.svg);
           background-repeat:no-repeat;
           background-position: left bottom;
-          background-size:contain; 
+          background-size:auto contain; 
         }
       }
     }
-
     .go-to-top{
       position:fixed;
       right:5%;
@@ -379,394 +382,236 @@
           font-size: $font-l;
           font-weight: bold;
           text-align: center;
-          margin-bottom: 104px;
+          margin-bottom: 48px;
         }
-        ul{
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
+        .swiper{
           width: 100%;
-          li{
-            position: relative;
-            width: 31.3%;
-            background: #fff;
-            @include pad{
-              width: 100%;
-            }
-            @include mobile{
-              width: 100%;
-              margin-bottom: 74px;
-            }
-            @include deco-shadow;
-            @include deco-border;
-            padding-left: 32px;
-            padding-right: 32px;
-            padding-bottom: 24px;
-            padding-top: 24px;
-            
-            .circularPhoto{ 
-              border-radius: 999px;
-              width: 80px;
-              height: 80px;
-              position: absolute;
-              top: -56px;
-              left: 32px;
-              @include deco-shadow;
-              img{
-                border-radius: 999px;
-                object-fit:contain;
+          height: 350px;
+          .swiper-wrapper{   
+            display: flex;
+            justify-content: space-around;                     
+            .swiper-slider{
+              width: 31%;
+              @include mobile{
                 width: 100%;
-                height:100%;
               }
-            }  
-            p.review{
-              font-size: $font-xs;
-              padding-top: 24px;
-              padding-bottom: 24px;
-              line-height: 1.5em;
-            }
-            hr{
-              width: 100%;
-              border-bottom: 0.5px solid #DDDDDD;
-              opacity: 1;
-            }
-            .company{
-              h4{
-                padding-top: 24px;
-                padding-bottom: 8px;
-                font-size: $font-s;
-                font-weight: bold;
-                margin-bottom: 8px;
-              }
-            }
-            .box{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              p{
-                font-size: $font-xs;
-              }
-              .score{
-                display: flex;
-                width: 121.02px;
-                justify-content: space-between;
-                align-items: center;
-                img{
-                  display: block;
-                  width: 16.78px;
-                  height: 16px;
+              .card-item{
+                position: relative;
+                width: 100%;               
+                .circularPhoto{
+                  z-index: 10;
+                  position: absolute;
+                  left: 32px;
+                  border-radius: 999px;
+                  width: 80px;
+                  height: 80px;
+                  top: 0px;
+                  left: 32px;          
+                  @include deco-shadow;
+                  img{
+                      border-radius: 999px;
+                      object-fit:contain;
+                      width: 80px;
+                      height:80px;
+                    }
+                }
+                .card-liner{
+                  position: absolute;
+                  top: 52px;
+                  width: 352px;
+                  height: 248px;
+                  background: #fff;
+                  @include pad{
+                    width: 100%;
+                  }
+                  @include mobile{
+                    width: 100%;
+                    margin-bottom: 74px;
+                  }
+                  @include deco-shadow;
+                  @include deco-border;
+                  padding-left: 32px;
+                  padding-right: 32px;                  padding-bottom: 24px;
+                  padding-top: 24px;
+                  p.review{
+                    font-size: $font-xs;
+                    padding-top: 24px;
+                    padding-bottom: 24px;
+                    line-height: 1.5em;
+                  }
+                  hr{
+                    width: 100%;
+                    border-bottom: 0.5px solid #DDDDDD;
+                    opacity: 1;
+                  }
+                  .company{
+                    h4{
+                      padding-top: 24px;
+                      padding-bottom: 8px;
+                      font-size: $font-s;
+                      font-weight: bold;
+                      margin-bottom: 8px;
+                    }
+                  }
+                  .box{
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      p{
+                        font-size: $font-xs;
+                      }
+                      .score{
+                        display: flex;
+                        width: 121.02px;
+                        justify-content: space-between;
+                        align-items: center;
+                        img{
+                          display: block;
+                          width: 16.78px;
+                          height: 16px;
+                        }
+                      }
+                  }
                 }
               }
             }
+          }
+          .swiper-pagination{ 
           }
         }
       }
       .plans-and-price{
-        margin-bottom: 100px;
-        h2{
-          font-size: $font-l;
-          text-align: center;
-          font-weight: bold;
-          margin-bottom: 48px;
+        max-width: 909px;
+        margin: 0 auto;
+          margin-bottom: 76px;
           @include mobile{
-            font-size: $font-m-l-l;
+
+            margin-bottom: 36px;
           }
-        }
-        .plans{
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          margin-bottom: 48px;
-          .number-of-people{
-            padding-left: 8px;
-            padding-right: 8px;
-            .num{
-              font-size: $font-l;
-              color: $color-primary;
-            }
-            a{
-              @include btn-tertiary;
-            }
-          }
-        }
-        .comparison{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .plan-basic{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-left: 10.5px;
-            margin-right: 10.5px;
-            width: 40.8%;
-            padding-bottom: 32px;
-            @include deco-border;
-            @include deco-shadow;
-            h3{
-              @include h3-title;
-              padding-top: 10px;
-              padding-bottom: 8px;
-            }
-            hr{
-              width: 100%;
-              border:0.5px solid $color-hr;
-              margin-bottom: 32px;
-            }
-            p{
-              text-align: center;
-              line-height: 1.5em;
-              .font-sub{
-                font-size: $font-xs - 4px;
-                line-height: 1.5em;
-              }
-              .font-sub-primary{
-                @include font-sub;
-                color: $color-primary;
-                font-weight: bold;
-              }
-              .font-sub-bold{
-                font-size: $font-xs - 4px;
-                line-height: 1.5em;
-                font-weight: bold;  
-              }
-              .font-num{
-                font-family: Comfortaa;
-                font-size: 32px;
-                line-height: 1.5em;
-              }
-              .font-num-primary{
-                color: $color-primary;
-                font-size: 32px;
-                line-height: 1.5em;
-              }
-            }
-            .app-inner{
-              display: flex;
-              justify-content: space-evenly;
-              align-content: center;
-              .num-subscriptions{
-                width: 169px;
-                padding-top: 24px;
-                padding-bottom: 24px;
-                margin-top: 32px;
-                margin-bottom: 32px;
-                margin-left: 26px;
-                background: #F5F5F5;
-                border-radius: 12px;
-                opacity: 1;
-              }
-              .equal{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-size: 29px;
-                padding-left: 21px;
-                padding-right: 17px;
-              }
-              .cost-monthly{
-                margin-right: 26px;
-                width: 169px;
-                padding-top: 24px;
-                padding-bottom: 24px;
-                margin-top: 32px;
-                margin-bottom: 32px;
-                background: #F5F5F5;
-                border-radius: 12px;
-                opacity: 1;
-              }
-            }
-            .features{
-              padding-bottom: 32px;
-              li{
-                background: url(../images/icon_check.svg);
-                background-repeat: no-repeat;
-                background-position: left;
-                background-size: 19.56px 16px;
-                
-                p{            
-                  font-size: $font-xs;
-                  text-align: left;
-                  padding-top: 8px;
-                  padding-bottom: 8px;
-                  padding-left: 28.94px;
-                }
-              }
-            }
-            a{
-              @include btn-primary;        
-            }
-          }
-          .plan-stander{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-left: 10.5px;
-            margin-right: 10.5px;
-            width: 40.8%;
-            padding-bottom: 32px;
-            @include deco-border;
-            @include deco-shadow;
-            h3{
-              @include h3-title;
-              padding-top: 10px;
-              padding-bottom: 8px;
-            }
-            hr{
-              width: 100%;
-              border:0.5px solid $color-hr;
-              margin-bottom: 32px;
-            }
-            p{
-              text-align: center;
-              line-height: 1.5em;
-              .font-sub{
-                font-size: $font-xs - 4px;
-                line-height: 1.5em;
-              }
-              .font-sub-primary{
-                @include font-sub;
-                color: $color-primary;
-                font-weight: bold;
-              }
-              .font-sub-bold{
-                font-size: $font-xs - 4px;
-                line-height: 1.5em;
-                font-weight: bold;  
-              }
-              .font-num{
-                font-family: Comfortaa;
-                font-size: 32px;
-                line-height: 1.5em;
-              }
-              .font-num-primary{
-                color: $color-primary;
-                font-size: 32px;
-                line-height: 1.5em;
-              }
-            }
-            .app-inner{
-              display: flex;
-              justify-content: space-evenly;
-              align-content: center;
-              .num-subscriptions{
-                width: 169px;
-                padding-top: 24px;
-                padding-bottom: 24px;
-                margin-top: 32px;
-                margin-bottom: 32px;
-                margin-left: 26px;
-                background: #F5F5F5;
-                border-radius: 12px;
-                opacity: 1;
-              }
-              .equal{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-size: 29px;
-                padding-left: 21px;
-                padding-right: 17px;
-              }
-              .cost-monthly{
-                margin-right: 26px;
-                width: 169px;
-                padding-top: 24px;
-                padding-bottom: 24px;
-                margin-top: 32px;
-                margin-bottom: 32px;
-                background: #F5F5F5;
-                border-radius: 12px;
-                opacity: 1;
-              }
-            }
-            .features{
-              padding-bottom: 32px;
-              li{
-                background: url(../images/icon_check.svg);
-                background-repeat: no-repeat;
-                background-position: left;
-                background-size: 19.56px 16px;
-                
-                p{            
-                  font-size: $font-xs;
-                  text-align: left;
-                  padding-top: 8px;
-                  padding-bottom: 8px;
-                  padding-left: 28.94px;
-                }
-              }
-            }
-            a{
-              @include btn-primary;        
-            }
-          }
-        }
-      }
-      .faq{
-        h2{
-          font-size: $font-l;
-          text-align: center;
-          font-weight: bold;
-          margin-bottom: 48px;
-          @include mobile{
-            font-size: $font-m-l-l;
-          }
-        }
-        li{
-          display: flex;
-          flex-direction: column;
-          padding: 16px 32px;
-          margin-bottom: 16px;
-          @include deco-border;
-          @include deco-shadow;
-          &:hover{
-            cursor: pointer;
-          }
-          .active{
-            color: $color-primary;
+          h2{
+            font-size: $font-l;
+            text-align: center;
             font-weight: bold;
+            margin-bottom: 48px;
+            @include mobile{
+              font-size: $font-m-l-l;
+              line-height: 1.5em;
+              margin-bottom: 24px;
+            }
           }
-          .faq-title{
+          .plans{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+            @include pad{
+              margin: 0 auto 32px auto;
+            }
+            .number-of-people{
+              padding-left: 8px;
+              padding-right: 8px;
+              display: block;
+              .num{
+                font-size: $font-l;
+                color: $color-primary;
+              }
+              a{
+                @include btn-tertiary;
+                display: block;
+                text-align: center;
+                margin-bottom: 16px;
+              }
+            }
+          }
+          .comparison{
+            max-width: 909px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            h3{
-              font-size: $font-s;
-              line-height: 1.5em;
+            flex-wrap: wrap;
+            background: #fff;
+            @include padair{
+              justify-content: center;
             }
-            img{
-              width: 20px;
-              height: 20px;
-              display: block;
+            @include pad{
+              justify-content: center;
+            }
+            .plan-basic{
+              @include comparisons-table;
+              margin-right: 10.5px;
+            }
+            .plan-stander {
+              @include comparisons-table;
+              margin-left: 10.5px;
+            } 
+          }       
+      }  
+      .faq{
+          max-width: 904px;
+          margin: 0 auto;
+          h2{
+            font-size: $font-l;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 48px;
+            @include mobile{
+              font-size: $font-m-l-l;
             }
           }
-          .faq-ans{
-            p{
-              margin-top: 12px;
-              font-size: $font-xs;
-              color: $color-third;
-              line-height: 2em;
+          li{
+            display: flex;
+            flex-direction: column;
+            padding: 16px 32px;
+            margin-bottom: 16px;
+            @include deco-border;
+            @include deco-shadow;
+            &:hover{
+              cursor: pointer;
+            }
+            .active{
+              color: $color-primary;
+              font-weight: bold;
+            }
+            .faq-title{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              h3{
+                font-size: $font-s;
+                line-height: 1.5em;
+                @include mobile{
+                  font-size: $font-xs;
+                }
+              }
+              img{
+                width: 20px;
+                height: 20px;
+                display: block;
+              }
+            }
+            .faq-ans{
+              p{
+                margin-top: 12px;
+                font-size: $font-xs;
+                color: $color-third;
+                line-height: 2em;
+              }
             }
           }
-        }
-      }
+      } 
     }
   }
 }
 .footer{
   text-align: center;
   background: url(../images/home_footer.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   @include mobile{
     background: url(../images/footer_sm.svg);
     background-repeat: no-repeat;
     background-size: contain;
   }
-  background-repeat: no-repeat;
-  background-size: contain;
-
   .p-footer{
     padding-top: 260px;
     font-size: $font-l;
